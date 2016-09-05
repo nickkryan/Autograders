@@ -28,6 +28,10 @@ public class hw0Output {
 		System.out.println("After File Name Check: " + grade);
 		List<String> fileContents = fileToList(file);
 		fileContentHelper(fileContents);
+		
+		if (grade < 100) {
+			System.out.println("\n" + fileContents + "\n");
+		}
 	}
 
 	private static void fileContentHelper(List<String> fileContents) {
@@ -35,6 +39,7 @@ public class hw0Output {
 		if (fileContents.contains("javac 1.")) {
 			grade += 5;
 		}
+
 		if (fileContents.contains("javac 1.8.")) {
 			grade += 5;
 		}
@@ -127,6 +132,15 @@ public class hw0Output {
 				if (get(i).contains(other)) return i;
 			}
 			return -1;
+		}
+		
+		@Override
+		public String toString() {
+			String result = "";
+			for (String s : this) {
+				result += s + "\n";
+			}
+			return result;
 		}
 	}
 }
