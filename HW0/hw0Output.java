@@ -50,14 +50,19 @@ public class hw0Output {
 		System.out.println("After Java Check: " + grade);
 
 		// NimblyBimbly Check
+		boolean nimblyCheck = true;
 		if (fileContents.contains("Meow Meow Meow Meow Meow Meow"
 			+ " Meow Meow Meow ...") && fileContents.contains("Meow!")) {
 			grade += 40;
+			nimblyCheck = false;
+		}
+		if (nimblyCheck) {
+			System.out.println("Check their NimblyBimbly output by hand");
 		}
 		System.out.println("After NimblyBimbly Check: " + grade);
 		
 		//School Check
-		if (fileContents.contains("Compile") || fileContents.contains("Compilation")) {
+		if (fileContents.contains("ompil")) {
 			grade += 10;
 			int lastIndex = fileContents.lastIndexOf("Runtime");
 			if (lastIndex > 5) {
