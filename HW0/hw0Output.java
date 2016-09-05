@@ -57,7 +57,7 @@ public class hw0Output {
 		System.out.println("After NimblyBimbly Check: " + grade);
 		
 		//School Check
-		if (fileContents.contains("Compile")) {
+		if (fileContents.contains("Compile") || fileContents.contains("Compilation") {
 			grade += 10;
 			int lastIndex = fileContents.lastIndexOf("Runtime");
 			if (lastIndex > 5) {
